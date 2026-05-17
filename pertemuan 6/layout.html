@@ -1,84 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+    <title>Layout CSS 3 Kolom 2 Baris</title>
 
-* {
-  box-sizing: border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
-/* Header */
-.header {
-  background-color: #4CAF50;
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
+        /* Header */
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px;
+            font-size: 30px;
+        }
 
-/* Container baris */
-.row {
-  display: flex;
-}
+        /* Kolom */
+        .column {
+            float: left;
+            padding: 20px;
+            height: 250px;
+        }
 
-/* Kolom */
-.column {
-  flex: 33.33%;
-  padding: 20px;
-  height: 200px;
-  border: 2px solid white;
-  color: white;
-  text-align: center;
-  font-size: 20px;
-}
+        /* 3 kolom */
+        .left {
+            width: 25%;
+            background-color: #f4cccc;
+        }
 
-/* Warna tiap box */
-.col1 { background-color: #2196F3; }
-.col2 { background-color: #f44336; }
-.col3 { background-color: #ff9800; }
+        .middle {
+            width: 50%;
+            background-color: #c9daf8;
+        }
 
-.col4 { background-color: #9c27b0; }
-.col5 { background-color: #009688; }
-.col6 { background-color: #795548; }
+        .right {
+            width: 25%;
+            background-color: #d9ead3;
+        }
 
-/* Footer */
-.footer {
-  background-color: #333;
-  padding: 15px;
-  text-align: center;
-  color: white;
-}
+        /* Clear float */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-</style>
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="header">
-  <h1>HEADER</h1>
-</div>
+    <!-- Header -->
+    <div class="header">
+        <h1>HEADER</h1>
+    </div>
 
-<!-- Baris Pertama -->
-<div class="row">
-  <div class="column col1">Sidebar Kiri</div>
-  <div class="column col2">Content Utama</div>
-  <div class="column col3">Sidebar Kanan</div>
-</div>
+    <!-- 3 Kolom -->
+    <div class="row">
 
-<!-- Baris Kedua -->
-<div class="row">
-  <div class="column col4">Gallery</div>
-  <div class="column col5">Artikel</div>
-  <div class="column col6">Informasi</div>
-</div>
+        <div class="column left">
+            <h2>SIDEBAR KIRI</h2>
+            <p>Berisi menu navigasi.</p>
+        </div>
 
-<div class="footer">
-  <h3>FOOTER</h3>
-</div>
+        <div class="column middle">
+            <h2>CONTENT</h2>
+            <p>Berisi isi utama website.</p>
+        </div>
+
+        <div class="column right">
+            <h2>SIDEBAR KANAN</h2>
+            <p>Berisi informasi tambahan.</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>FOOTER</h2>
+    </div>
 
 </body>
 </html>
