@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Portofolio Saiful Azmi Rahanyamtel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">AM</div>
+    <nav>
+      <a href="#about">TENTANG</a>
+      <a href="#hobi">HOBI</a>
+      <a href="#contact">KONTAK</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sidebar Profil -->
+    <aside class="profile">
+      <img src="Azmi.jpeg" alt="Foto Profil" class="foto">
+      <h2>Saiful Azmi Rahanyamtel</h2>
+      <p>NIM: 2500018063</p>
+      <p>Kelas B – Informatika</p>
+      <p>Universitas: UAD</p>
+      <p>Angkatan: 2025</p>
+      <p>Status: Mahasiswa Aktif</p>
+      <h3>Temukan saya di:</h3>
+      <div class="social">
+        <a href="https://www.instagram.com/x.azmirafaa_?igsh=cjN4eXk2MjcyMHdr" target="_blank">Instagram</a>
+        <a href="https://wa.me/6283827884020" target="_blank">WhatsApp</a>
+        <a href="mailto:2500018063@webmail.uad.ac.id">Email</a>
+        <a href="https://www.tiktok.com/@user2507200811?_r=1&_t=ZS-96U8mXXL5yj">Tiktok</a>
+      </div>
+    </aside>
+
+    <!-- Konten Utama -->
+    <section class="content">
+      <div id="about" class="card">
+        <h2>TENTANG SAYA</h2>
+        <p>Halo, saya Saiful Azmi Rahanyamtel, mahasiswa Informatika yang memiliki minat pada web development, UI/UX design, dan pemrograman. Saya senang mempelajari teknologi baru dan mengembangkan project berbasis website.</p>
+      </div>
+
+      <div id="hobi" class="card">
+  <h2>HOBI & MINAT</h2>
+  <div class="hobi-grid">
+    <div class="hobi-item" onclick="tampilkanGambar('gaming')">
+      <h3>🎮 Gaming</h3>
+      <p>Melatih strategi berpikir sambil hiburan.</p>
+      <img id="gaming" src="game.jpeg" alt="Gaming" style="display:none; width:200px;">
+    </div>
+    <div class="hobi-item" onclick="tampilkanGambar('motor')">
+      <h3>🏍️Motor</h3>
+      <p>Dari motor kita mendapat teman.</p>
+      <img id="motor" src="motor.jpeg" alt="Motor" style="display:none; width:200px;">
+    </div>
+    <div class="hobi-item" onclick="tampilkanGambar('adventure')">
+      <h3>🌍 Adventure</h3>
+      <p>Menjelajah alam terbuka untuk pengalaman baru.</p>
+      <img id="adventure" src="gym.jpeg" alt="Adventure" style="display:none; width:200px;">
+    </div>
+  </div>
+</div>
+
+
+      <div id="contact" class="card">
+        <h2>KONTAK</h2>
+        <p><strong>Email:</strong> 2500018063@webmail.uad.ac.id</p>
+        <p><strong>WhatsApp:</strong> +62 838-2788-4020</p>
+        <form onsubmit="return kirimPesan()">
+          <label>Nama:</label>
+          <input type="text" id="nama">
+          <label>Email:</label>
+          <input type="email" id="email">
+          <label>Pesan:</label>
+          <textarea id="pesan"></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+        <p id="output"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
